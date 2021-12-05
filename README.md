@@ -57,7 +57,7 @@ React中对Fiber树的遍历采用了深度优先算法，以上图为例，先�
 
 文字看着有点乱，下图可直观的看出其遍历顺序：
 
-![fiber-map](F:\github\mini-react\fiber-map.svg)
+![fiber-map](./fiber-map.svg)
 
 
 
@@ -76,7 +76,7 @@ React官方指定的Hook调用规则有两条：
 
 我们来通过下图了解下：         
 
-![hooks-link-list](F:\github\mini-react\hooks-link-list.svg)
+![hooks-link-list](./hooks-link-list.svg)
 
 在函数组件中使用的多个Hook之间是通过链表连接的，Hook没有具体的名字也没有其他可以标识执行顺序的东西，只能从Hook头节点通过next指针指向下一个hook节点，可见，Hook的执行严重的依赖于其定义时的顺序的，倘若在循环、条件或嵌套函数中调用Hook，就有可能导致Hook在更新的时候调用顺序错乱，从而导致严重的渲染问题。
 
